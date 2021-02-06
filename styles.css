@@ -117,7 +117,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   .profile-name {
     font-size: 16px;
