@@ -10,16 +10,19 @@ function openComments() {
   } else {
     div.style.display = "none";
     banner.style.display = "block";
+    slides.style.display = "none";
   }
 }
 
 // button close who takes to banner
 
 function backBanner() {
+  var div = document.getElementById("comments-area");
   var banner = document.getElementById("banner");
   var slides = document.getElementById("slides-container");
 
-  if (banner.style.display === "none") {
+  if (div.style.display === "none") {
+    div.style.display = "none";
     banner.style.display = "block";
     slides.style.display = "none";
   } else {
@@ -34,10 +37,12 @@ var slideIndex = 0;
 showSlide(slideIndex);
 
 function currentSlide(n) {
+  var div = document.getElementById("comments-area");
   var banner = document.getElementById("banner");
   var slides = document.getElementById("slides-container");
 
   showSlide(slideIndex = n);
+  div.style.display = "none";
   banner.style.display = "none";
   slides.style.display = "block";
 }

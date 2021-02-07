@@ -3,6 +3,7 @@
   font-family: 'Roboto';
   margin: 0;
   padding: 0;
+  transition: 300ms;
 }
 
 @media (max-width: 800px) {
@@ -11,6 +12,8 @@
     margin: auto;
   }
   #banner {
+    background-image: url(./images/banner-main.png);
+    display: block;
     height: 100vh;
     max-width: 100vw;
   }
@@ -124,7 +127,8 @@
   /* comments field */
   .comments {
     background: #fafafa;
-    height: 98vh;
+    display: none;
+    height: 100vh;
     overflow-y: scroll;
     transition: .5s;
   }
