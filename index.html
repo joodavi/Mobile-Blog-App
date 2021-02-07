@@ -6,16 +6,27 @@
   <title>Mobile Blog App</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
   <link href="/styles.css" rel="stylesheet">
 </head>
 <body>
-  <div class="slides-container">
-    <div id="banner" class="slides" style="background-image: url(./images/banner-main.png);">
-      <div class="title">
-        <h3>Mark Manson</h3>
-        <p class="title-article">THE <br>DARK SIDE OF THE DIGITAL NOMAD</p>
-        <button class="travel">TRAVEL</button>
-      </div>
+  <div id="banner" style="background-image: url(./images/banner-main.png);">
+    <div class="title">
+      <h3>Mark Manson</h3>
+      <p class="title-article">THE <br>DARK SIDE OF THE DIGITAL NOMAD</p>
+      <button class="travel" onclick="currentSlide(1)">TRAVEL</button>
+    </div>
+  </div>
+  <div id="slides-container" class="slides-container">
+    <div class="slides">
+      <p class="slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel vehicula massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet augue facilisis, feugiat mi a, fermentum mauris. <br>
+      Aliquam sapien mauris, porttitor ut commodo at, consequat eget neque. Nullam pulvinar, massa nec cursus semper, erat felis eleifend massa, nec tincidunt tortor ante eu metus. Sed posuere porttitor auctor. Sed quis metus felis. Suspendisse tempus molestie tincidunt. <br> Pellentesque felis lectus, viverra id nisi nec, semper venenatis augue. Phasellus imperdiet ornare purus ut porta. Nunc sit amet turpis in magna dapibus iaculis eu sit amet lacus.</p>
+    </div>
+    <div class="slides">
+      <p class="slide-text">Nam non aliquam magna, et blandit turpis. Nullam urna tellus, varius commodo semper eget, tristique at ligula. Suspendisse maximus ullamcorper rhoncus. <br> Duis a aliquam dui, dictum mollis tortor. Donec consectetur velit urna, sit amet dictum nulla ultricies ac. Donec eget lorem faucibus, faucibus augue sed, dignissim nulla. Aenean vitae urna vulputate, iaculis tortor eget, maximus lorem. Morbi ut dapibus lorem. Nulla elementum quam sed mi dapibus hendrerit. Suspendisse potenti. <br> Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In eget erat quis neque pharetra accumsan sed id odio.</p>
+    </div>
+    <div class="slides">
+      <p class="slide-text">Mauris eget felis volutpat mauris mollis accumsan. Nunc pulvinar lacus lorem, ut consectetur purus tempus vestibulum. Curabitur pulvinar nunc sapien, ut commodo metus maximus sit amet. Nunc a hendrerit ante. <br> Curabitur at ipsum neque. Donec faucibus venenatis posuere. Fusce fringilla mauris libero, at egestas augue imperdiet ut. Donec posuere eu sapien nec iaculis.</p>
     </div>
   </div>
 
@@ -118,12 +129,11 @@
   </div>
   <!-- footer change name plx-->  
   <footer class="footer">
-    <button class="btnClose">CLOSE</button>
+    <button class="btnClose" onclick="backBanner()">CLOSE</button>
     <div class="dots">
-      <span id="dot"></span>
-      <span id="dot"></span>
-      <span id="dot"></span>
-      <span id="dot"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
      <button class="btn-comments" onclick="openComments()">
       <img class="chat" src="./images/svg/chat_bubble_outline-24px.svg" />
